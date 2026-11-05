@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://cu6db2rjdpajs"]
+
+[ext_resource type="Script" uid="uid://bn34uq7rng677" path="res://scripts/team_select.gd" id="1_cf774"]
+
+[node name="TeamSelect" type="Control" unique_id=1716905131]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cf774")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1456139057]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.043137256, 0.16470589, 0.2901961, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2090477557]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1553613175]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=109791775]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Выберите клуб"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=43706303]
+layout_mode = 2
+
+[node name="MainHBox" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1290474071]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TeamListScroll" type="ScrollContainer" parent="MarginContainer/VBoxContainer/MainHBox" unique_id=392324329]
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TeamListVBox" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MainHBox/TeamListScroll" unique_id=1635399398]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InfoPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer/MainHBox" unique_id=1498728207]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InfoMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer/MainHBox/InfoPanel" unique_id=1448367310]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="InfoVBox" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MainHBox/InfoPanel/InfoMargin" unique_id=41666737]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1540651472]
+custom_minimum_size = Vector2(0, 60)
+clip_contents = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Начать карьеру"

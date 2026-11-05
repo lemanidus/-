@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://wf12ys1b3o5v"]
+
+[ext_resource type="Script" uid="uid://c28rf3mxddjdh" path="res://scripts/playoff_screen.gd" id="1_3miu2"]
+
+[node name="PlayoffScreen" type="Control" unique_id=569224967]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3miu2")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1292897828]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.043137256, 0.16470589, 0.2901961, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=421749551]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1876786644]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=109566425]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "ПЛЕЙ-ОФФ"
+
+[node name="RoundInfo" type="Label" parent="MarginContainer/VBoxContainer" unique_id=834199655]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "1/8 ФИНАЛА "
+
+[node name="SeriesScroll" type="ScrollContainer" parent="MarginContainer/VBoxContainer" unique_id=869002119]
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SeriesList" type="VBoxContainer" parent="MarginContainer/VBoxContainer/SeriesScroll" unique_id=1024497407]
+layout_mode = 2
+
+[node name="BottomBar" type="HBoxContainer" parent="." unique_id=558789532]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 8
+size_flags_vertical = 10
+offset_transform_enabled = true
+
+[node name="NextSeriesBtn" type="Button" parent="BottomBar" unique_id=879647412]
+custom_minimum_size = Vector2(0, 60)
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_force_pass_scroll_events = false
+text = "СИМУЛИРОВАТЬ СЕРИЮ"

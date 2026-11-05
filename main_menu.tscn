@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://dfl7d3cufvrpm"]
+
+[ext_resource type="Script" uid="uid://cfbgym87a4434" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+
+[node name="MainMenu" type="Control" unique_id=1792175538]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l6cm7")
+
+[node name="Background" type="ColorRect" parent="." unique_id=677648070]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.043137256, 0.16470589, 0.2901961, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=849045553]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=553376159]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="LogoLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=895048105]
+layout_mode = 2
+theme_override_font_sizes/font_size = 72
+text = "ЛВХ"
+horizontal_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=2105918556]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.654902, 0.70980394, 0.7647059, 1)
+theme_override_font_sizes/font_size = 20
+text = "Лига Виртуального Хоккея"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="CenterContainer/VBoxContainer" unique_id=1570451725]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="NewCareerButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1583411174]
+custom_minimum_size = Vector2(300, 60)
+clip_contents = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Новая карьера"
+
+[node name="ContinueButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1365805202]
+custom_minimum_size = Vector2(300, 69)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Продолжить "
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1934517085]
+custom_minimum_size = Vector2(300, 60)
+clip_contents = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Выход"
